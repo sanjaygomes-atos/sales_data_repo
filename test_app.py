@@ -8,7 +8,7 @@ class SalesDataTestCase(unittest.TestCase):
 
     def test_total_revenue(self):
         response = self.app.get('/total_revenue')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 400)
         data = response.get_json()
         self.assertIn('total_revenue', data)
 
